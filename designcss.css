@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #1e5570;
+}
+
+header {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+header .logo {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #1e5570;
+    text-decoration: none;
+}
+
+header nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(30, 85, 112, 0.9);
+    top: 100%;
+    left: -85px;
+    width: 200px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+header nav ul li:hover .dropdown {
+    display: block;
+}
+
+header nav ul li .dropdown li {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li .dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header nav ul li .dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collections {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(30, 85, 112, 0.1), #f8f9fa);
+    margin-top: -800px;
+}
+
+.collections h2 {
+    margin-bottom: 40px;
+    font-size: 1.5em;
+}
+
+.collection {
+    margin-bottom: 40px;
+}
+
+.collection h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: rgba(30, 85, 112, 0.8);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.collection-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.collection-gallery img {
+    width: 300px;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    object-fit: cover;
+}
+
+.collection-gallery img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #1e5570;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .collection-gallery img {
+        width: 100%;
+        max-width: 600px;
+        width: 400px;
+        height: 600px;
+    }
+    header nav ul li .dropdown {
+        left: -20px;
+    }
+    .collections {
+        margin-top: -200px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .collection-gallery img {
+        width: 100%;
+        max-width: 200px;
+    }
+}
